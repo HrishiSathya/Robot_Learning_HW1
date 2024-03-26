@@ -7,4 +7,10 @@ One important note is that the Q table is quite large, as it is of the size of t
 We also define our loss function as a distance function between the end effector and the goal state, where we seek to minimize this loss.
 
 ## Tamer
-The tamer algorithm is trained using Q-value iteration. Then, during the execution phase, t
+The Tamer algorithm is trained using Q-value iteration. Then, during the execution phase, the user will input 1 or -1 as a reward to give, so that the robot end effector will minimize the cost function.
+
+## Sophie's Kitchen
+The Sophie's Kitchen algorithm is trained the same way as Tamer. Then, during the execution phase, the user will input a distance reward based on feedback from the robots  end effector distance to the goal.
+
+## Plotting
+plot.py will plot the box and whisker plots for every trial with a new seed for each algorithm. This is based on the loss output from each of the data, which is then stored in a text file, toalSophieloss.txt and totalTamerloss.txt, respectively. The plots are also shown. We show that the results are not ideal, as more data is needed to train such a big Q table, which led to the Q table being very sparse.
